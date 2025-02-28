@@ -14,18 +14,19 @@ const Home = () => {
 
   return (
     <div>
-      <div className='flex fixed top-0 left-0 z-[50] items-center w-full justify-evenly p-5 bg-gray-200 '>
+      <nav className= 'w-full fixed top-0 left-0 z-[50] bg-gray-200 '>
+        <div className="max-w-7xl mx-auto flex items-center justify-evenly p-5">
         <img
           src={'/logo.png'}
           className='h-10 cursor-pointer'
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} />
-        <nav className='uppercase hidden md:flex gap-7 cursor-pointer '>
+        <div className='uppercase hidden md:flex gap-6 cursor-pointer '>
           <a href="#">Home</a>
           <a href="#about">About</a>
           <a href="#progress">Progress</a>
           <a href="#support">Support</a>
           <a href="#consultation">Take a free consultation</a>
-        </nav>
+        </div>
         <div className='hidden md:flex gap-3 cursor-pointer'>
           <p className='text-xl hover:scale-125'><FiSearch /></p>
           <p className='text-xl hover:scale-125'><IoCartOutline /></p>
@@ -35,7 +36,8 @@ const Home = () => {
         <button className='md:hidden' onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? <FiX /> : <FiMenu />}
         </button>
-      </div>
+        </div>
+      </nav>
 
       {
         menuOpen && (
